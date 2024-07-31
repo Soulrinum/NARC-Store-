@@ -75,6 +75,7 @@ if(isset($_POST['send'])){
          <img src="images/contact-img.svg" alt="">
       </div>
 
+      <!-- Form Elements: Text, Number, Email, Submit-->
       <form action="" method="post">
          <h3>Tell us about your experince</h3>
          <input type="text" name="name" maxlength="50" class="box" placeholder="enter your name" required>
