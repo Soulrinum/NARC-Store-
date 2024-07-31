@@ -55,6 +55,7 @@ if(isset($_POST['submit'])){
 
 <section class="form-container">
 
+   <!-- Form Elements: Email, Password, Submit--> 
    <form action="" method="post">
       <h3>login now</h3>
       <input type="email" name="email" required placeholder="enter your email" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
