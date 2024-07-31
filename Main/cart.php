@@ -90,6 +90,8 @@ $grand_total = 0;
             <input type="number" name="qty" class="qty" min="1" max="99" value="<?= $fetch_cart['quantity']; ?>" maxlength="2">
             <button type="submit" class="fas fa-edit" name="update_qty"></button>
          </div>
+
+   <!-- Form Based Calculation For Cart -->
          <div class="sub-total"> sub total : <span>$<?= $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</span> </div>
       </form>
       <?php
@@ -101,6 +103,9 @@ $grand_total = 0;
       ?>
 
    </div>
+
+      <!-- End, Form Based Calculation For Cart -->
+
 
    <div class="cart-total">
       <p>cart total : <span>$<?= $grand_total; ?></span></p>
