@@ -89,6 +89,7 @@ include 'components/add_cart.php';
 
 <section class="category">
 
+   <!-- Small Spelling Error--> 
    <h1 class="title">Items Avalible</h1>
 
    <div class="box-container">
@@ -133,6 +134,8 @@ include 'components/add_cart.php';
          if($select_products->rowCount() > 0){
             while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
       ?>
+
+      <!-- Form Elements: Hidden, Submit, Number -->
       <form action="" method="post" class="box">
          <input type="hidden" name="pid" value="<?= $fetch_products['id']; ?>">
          <input type="hidden" name="name" value="<?= $fetch_products['name']; ?>">
