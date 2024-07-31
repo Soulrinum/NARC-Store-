@@ -86,6 +86,8 @@ if(isset($_POST['submit'])){
 
    <div class="cart-items">
       <h3>cart items</h3>
+
+      <!-- Form Based Calculations: Cart --> 
       <?php
          $grand_total = 0;
          $cart_items[] = '';
@@ -104,10 +106,15 @@ if(isset($_POST['submit'])){
             echo '<p class="empty">your cart is empty!</p>';
          }
       ?>
+
+      <!-- End --> 
+
+      
       <p class="grand-total"><span class="name">grand total :</span><span class="price">$<?= $grand_total; ?></span></p>
       <a href="cart.php" class="btn">veiw cart</a>
    </div>
 
+   <!-- Form Elements: Hidden--> 
    <input type="hidden" name="total_products" value="<?= $total_products; ?>">
    <input type="hidden" name="total_price" value="<?= $grand_total; ?>" value="">
    <input type="hidden" name="name" value="<?= $fetch_profile['name'] ?>">
@@ -125,6 +132,7 @@ if(isset($_POST['submit'])){
       <p><i class="fas fa-map-marker-alt"></i><span><?php if($fetch_profile['address'] == ''){echo 'Please enter when you want to pickup';}else{echo $fetch_profile['address'];} ?></span></p>
       <a href="update_address.php" class="btn">Change Your Mind?</a>
       <select name="method" class="box" required>
+         <!-- Form Element: Option, Submit-->
          <option value="" disabled selected>select payment method --</option>
          <option value="cash on delivery">Cash</option>
          <option value="credit card">Credit card</option>
